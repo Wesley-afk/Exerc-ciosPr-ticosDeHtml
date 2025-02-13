@@ -4,19 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posição relativa</title>
+    <title>Posição absoluta</title>
     <style>
         /* hashtag é para id */
         #elemento_pai {
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             background-color: #ccc;
+            position: relative;
         }
 
         .posrelativa {
             position: relative;
             width: 150px;
-            height: 60px;
+            height: 150px;
+        }
+
+        .posabsoluta {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
         }
 
         .vermelho {
@@ -26,10 +35,6 @@
         .azul {
             background-color: blue;
         }
-
-        .top50 {
-            top: 50px
-        }
     </style>
 </head>
 
@@ -37,8 +42,7 @@
     <!--um id contendo as classes-->
     <div id="elemento_pai">
         <div class="posrelativa azul">01</div>
-        <div class="posrelativa vermelho">02</div>
-        <div class="posrelativa azul top50">03</div>
+        <div class="posabsoluta vermelho">02</div>
     </div>
 </body>
 
